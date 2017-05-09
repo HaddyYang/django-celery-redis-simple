@@ -10,6 +10,15 @@ def sendmail(email):
     print('success')
     return True
 
+#bind等于True则绑定到celery app对象，可使用app的方法
+@task(bind=True)
+def err_retry(self, email):
+    try:
+        a = 1/0
+    except Exception as e:
+        #尝试重新执行1次任务
+        raise self.retry(exc=e)
+
 
 #定时任务
 from celery.task.schedules import crontab  
