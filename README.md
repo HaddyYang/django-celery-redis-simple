@@ -28,3 +28,4 @@ Redis数据库的版本
 * [Django使用Redis作缓存](http://yshblog.com/blog/156) 
 * [装饰器优化Redis缓存代码](http://yshblog.com/blog/161) 
 * [Celery定时刷新缓存](http://yshblog.com/blog/166) 
+* [Celery异步发送邮件](http://yshblog.com/blog/168)
